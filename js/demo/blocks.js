@@ -136,7 +136,8 @@ function load_data_to_table(result) {
                 <a role="button" tabindex="0" type="button" class="js-txnAdditional-1 btn btn-xs btn-icon btn-soft-secondary myFnExpandBox"><i class="far fa-eye btn-icon__inner"></i></a>
             </td>
             <td>
-                <span class="hash-tag text-truncate"><a href="/tx/${data[i].hash}" class="myFnExpandBox_searchVal">${data[i].hash}</a></span>
+                <span 
+            class="hash-tag text-truncate"><a href="/tx/${data[i].hash}" class="myFnExpandBox_searchVal">${data[i].hash}</a></span>
             </td>
             <td>
                 <span style="min-width:68px;" class="u-label u-label--xs u-label--info rounded text-dark text-center" data-toggle="tooltip" data-boundary="viewport" data-html="true" title="" data-original-title="${method}">${method}</span>
@@ -154,18 +155,8 @@ function load_data_to_table(result) {
             <td>
                 <a class="hash-tag text-truncate" href="/address/${data[i].input.address}" data-toggle="tooltip" data-boundary="viewport" data-html="true" title="" data-original-title="${data[i].input.address}">${data[i].input.address}</a>
             </td>
-            <td class="text-center">
-                <span class="btn btn-xs btn-icon btn-soft-success rounded-circle"><i class="fas fa-long-arrow-alt-right btn-icon__inner"></i></span>
-            </td>
-
-            <td>
-                <span style="white-space: nowrap;"><i class="far fa-file-alt text-secondary" data-toggle="tooltip" title="" data-original-title="Contract"></i> <a class="hash-tag text-truncate" href="/address/${data[i].output.address}" data-boundary="viewport" data-html="true" data-toggle="tooltip" title="" data-original-title="${data[i].output.address}">${data[i].output.address}</a></span>
-            </td>
             <td>
                 CPU ${data[i].output.cpu}, RAM ${data[i].output.ram}, DISK ${data[i].output.disk}
-            </td>
-            <td style="" class="showTxnFee">
-                <span class="small text-secondary">0</span>
             </td>
             <td style="display:none !important; " class="showGasPrice">
                 <span class="small text-secondary">0</span>
