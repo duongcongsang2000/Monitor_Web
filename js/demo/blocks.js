@@ -146,10 +146,10 @@ function load_data_to_table(result) {
                 <a href="/blocks/">${data[i]._id.$oid}</a>
             </td>
             <td class="showDate " style="display:none !important; ">
-                <span rel="tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="12 secs ago">${convertTimestampToDate(data[i].input.timestamp)}</span>
+                <span rel="tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="12 secs ago">${unixTime(data[i].input.timestamp)}</span>
             </td>
             <td style="" class="showAge ">
-                <span rel="tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="${convertTimestampToDate(data[i].input.timestamp)}">${convertTimestampToDate(data[i].input.timestamp)}</span>
+                <span rel="tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="${unixTime(data[i].input.timestamp)}">${unixTime(data[i].input.timestamp)}</span>
             </td>
 
             <td>
@@ -166,8 +166,6 @@ function load_data_to_table(result) {
         `)
     }
 }
-
-
 function convertTimestampToDate(timestamp) {
     var utcTime = new Date(timestamp);
     var m = new Date(utcTime.toLocaleString())
@@ -180,3 +178,9 @@ function convertTimestampToDate(timestamp) {
         ("0" + m.getSeconds()).slice(-2);
     return dateString;
 }
+function unixTime(timestamp) {
+
+    var u = new Date(timestamp);
+
+      return u.toLocaleString();
+    };

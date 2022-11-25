@@ -172,7 +172,7 @@ var getData = function () {
                         chartCPU.data.labels.shift();
                         chartCPU.data.datasets[0].borderColor.shift();
                     }
-                    var dateString = convertTimestampToDate(data.input.timestamp)
+                    var dateString = unixTime(data.input.timestamp)
                     var cpu = data.output.cpu 
                     chartCPU.data.labels.push(dateString);
                     chartCPU.data.datasets[0].data.push(cpu);
@@ -255,6 +255,9 @@ function convertTimestampToDate(timestamp) {
         ("0" + m.getSeconds()).slice(-2);
     return dateString;
 }
-
+function unixTime(timestamp) {
+    var u = new Date(timestamp);
+    return u.toLocaleString();
+};
 // get new data every 3 seconds
 setInterval(getData, 3000);
