@@ -114,18 +114,28 @@ async function restorePublickeys(publicKey) {
         redirect: 'follow',
     }; 
 
-    fetch(url, requestOptions)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error: ${response.status}`);
-                }
-            })
-            .then(result => {
-                console.log(result);
-            })
-            .catch(error => {
-                console.log('error', error)
-            })
+    // fetch(url, requestOptions)
+    //         .then(response => {
+    //             if (!response.ok) {
+    //                 throw new Error(`HTTP error: ${response.status}`);
+    //             }
+    //         })
+    //         .then(result => {
+    //             console.log(result);
+    //         })
+    //         .catch(error => {
+    //             console.log('error', error)
+    //         })
+
+    var settings = {
+        "url": url,
+        "method": "GET",
+        "timeout": 0,
+        };
+        
+    $.ajax(settings).done(function (response) {
+    console.log(response);
+    });
 }
 
 async function createPublickey() {

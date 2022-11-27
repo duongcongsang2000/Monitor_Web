@@ -22,7 +22,7 @@
 
 </head>
 
-<body id="page-top" onload="loadFirstBlock()">
+<body id="page-top" onload="">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -527,9 +527,12 @@
     <script src="https://use.fontawesome.com/8663e94a6a.js"></script>
     <!-- Page level custom scripts -->
     <!-- <script src="js/demo/chart-area-demo.js"></script> -->
-    <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/blocks.js"></script>
-
+    <script type="text/javascript">
+        $(document).ready(function(){
+            loadFirstBlock()
+        });
+    </script>
 </body>
 
 </html>

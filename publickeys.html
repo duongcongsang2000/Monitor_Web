@@ -23,7 +23,7 @@
 
 </head>
 
-<body id="page-top" onload="loadPublickeys()">
+<body id="page-top" onload="">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -451,8 +451,12 @@
     <script src="https://use.fontawesome.com/8663e94a6a.js"></script>
     <!-- Page level custom scripts -->
     <!-- <script src="js/demo/chart-area-demo.js"></script> -->
-    <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/node.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            loadPublickeys()
+        });
+    </script>
 </body>
 
 </html>
