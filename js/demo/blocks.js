@@ -133,9 +133,6 @@ function load_data_to_table(result) {
         <tr>
             
             <td>
-                <a role="button" tabindex="0" type="button" class="js-txnAdditional-1 btn btn-xs btn-icon btn-soft-secondary myFnExpandBox"><i class="far fa-eye btn-icon__inner"></i></a>
-            </td>
-            <td>
                 <span 
             class="hash-tag text-truncate"><a href="/tx/${data[i].hash}" class="myFnExpandBox_searchVal">${data[i].hash}</a></span>
             </td>
@@ -157,6 +154,9 @@ function load_data_to_table(result) {
             </td>
             <td>
                 CPU ${data[i].output.cpu}, RAM ${data[i].output.ram}, DISK ${data[i].output.disk}
+            </td>
+            <td>
+                ${data[i].output.alert}
             </td>
             <td style="display:none !important; " class="showGasPrice">
                 <span class="small text-secondary">0</span>
